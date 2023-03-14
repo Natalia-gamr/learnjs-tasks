@@ -1,0 +1,16 @@
+.arrow {
+    color: green;
+    display: none;
+}
+
+#button {
+    cursor: pointer;
+}
+
+.open {
+    display: inline;
+}
+
+.close {
+    display: none;
+}
