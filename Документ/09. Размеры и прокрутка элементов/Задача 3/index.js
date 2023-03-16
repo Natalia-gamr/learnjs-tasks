@@ -10,4 +10,3 @@ let widthField = field.clientWidth
 
 ball.style.top = heightField / 2 - heightBall / 2 + 'px'
 ball.style.left = widthField / 2 - widthBall / 2 + 'px'
-

@@ -7,9 +7,8 @@ let ul = document.querySelector('ul')
 let button = document.querySelector('#button')
 
 button.addEventListener('click', () => {
-    ul.classList.toggle('close') 
+    ul.classList.toggle('close')
     arrows.forEach((arrow) => {
-        arrow.classList.toggle('open') 
+        arrow.classList.toggle('open')
     })
-    
 })

@@ -12,6 +12,3 @@ for (let pane of panes) {
     let button = pane.firstChild
     button.onclick = () => pane.remove()
 }
-
-
-// panes.forEach(pane => pane.append(button))

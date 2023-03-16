@@ -20,15 +20,15 @@ function positionAt(anchor, position, elem) {
     switch (position) {
         case 'top':
             elem.style.top = top - elem.offsetHeight + 'px'
-            elem.style.left =  left + 'px'
+            elem.style.left = left + 'px'
             break;
         case 'right':
-            elem.style.top = top  + 'px'
-            elem.style.left =  left + anchor.offsetWidth + 'px'
+            elem.style.top = top + 'px'
+            elem.style.left = left + anchor.offsetWidth + 'px'
             break;
         case 'bottom':
             elem.style.top = top + anchor.offsetHeight + 'px'
-            elem.style.left =  left + 'px'
+            elem.style.left = left + 'px'
             break;
     }
 }
@@ -41,7 +41,6 @@ function showNote(anchor, position, html) {
 
     positionAt(anchor, position, note);
 }
-
 
 let blockquote = document.querySelector('blockquote');
 

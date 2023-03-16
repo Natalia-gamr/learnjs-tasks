@@ -15,23 +15,22 @@ function createCalendar(elem, year, month) {
 
     let table = '<table><tr><th>пн</th><th>вт</th><th>ср</th><th>чт</th><th>пт</th><th>сб</th><th>вс</th></tr><tr>';
 
-    function getDay(date) { 
-      let day = date.getDay();
-      if (day == 0) day = 7; 
-      return day - 1;
+    function getDay(date) {
+        let day = date.getDay();
+        if (day == 0) day = 7;
+        return day - 1;
     }
 
     for (let i = 0; i < getDay(m); i++) {
-    table += '<td></td>';
+        table += '<td></td>';
     }
 
     while (m.getMonth() == month - 1) {
         table += '<td>' + m.getDate() + '</td>';
 
-        if (getDay(m) % 7 == 6) { 
+        if (getDay(m) % 7 == 6) {
             table += '</tr><tr>';
         }
-
         m.setDate(m.getDate() + 1);
     }
 
@@ -48,4 +47,4 @@ function createCalendar(elem, year, month) {
 let year = +prompt('year?')
 let month = +prompt('month?')
 
-createCalendar(calendar,year, month)
+createCalendar(calendar, year, month)
