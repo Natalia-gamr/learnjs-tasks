@@ -24,21 +24,17 @@ async function demoGithubUser() {
     let user;
     while (true) {
         let name = prompt("Введите логин?", "iliakan");
-
         try {
             user = await loadJson(`https://api.github.com/users/${name}`);
-            break; // ошибок не было, выходим из цикла
+            break;
         } catch (err) {
             if (err instanceof HttpError && err.response.status == 404) {
-                // после alert начнётся новая итерация цикла
                 alert("Такого пользователя не существует, пожалуйста, повторите ввод.");
             } else {
-                // неизвестная ошибка, пробрасываем её
                 throw err;
             }
         }
     }
-
 
     alert(`Полное имя: ${user.name}.`);
     return user;

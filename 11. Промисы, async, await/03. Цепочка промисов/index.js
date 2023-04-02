@@ -3,6 +3,4 @@
 
 promise.then(f1).catch(f2); // ошибка будет обработана
 
-// Против:
-
 promise.then(f1, f2);
